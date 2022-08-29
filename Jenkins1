@@ -1,0 +1,29 @@
+pipeline{
+    agent any
+    stages{
+        stage("git"){
+            when{
+                branch "dev"
+            }
+            steps{
+                git credentialsId: 'github-creds', url: 'https://github.com/hemanthhema123/my-web.git'
+            }
+        }
+        stage("maven"){
+            when{
+                branch "one"
+            }
+            steps{
+                sh 'mvn clean package'
+            }
+        }
+        stage("deploy"){
+            when{
+                branch "master"
+            }
+            steps{
+                echo "hyma is a intelligent girl"
+            }
+        }
+    }
+}
