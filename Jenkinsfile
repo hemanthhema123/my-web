@@ -12,10 +12,5 @@ pipeline{
               sh 'mvn clean package'
             }
         }
-        stage("tomcat"){
-            steps{
-             tomcatDeploy("172.31.21.127","ec2-user","tomcat-dev") 
-            }
-        }
     }
 }
