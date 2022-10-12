@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage("git"){
             steps{
-              git url: 'https://github.com/hemanthhema123/pipeline.git'   
+              git url: 'https://github.com/hemanthhema123/my-web.git'   
             }
         }
         stage("maven"){
