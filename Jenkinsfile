@@ -1,4 +1,3 @@
-@Library("hemanthlibs") _
 pipeline{
     agent any
     stages{
